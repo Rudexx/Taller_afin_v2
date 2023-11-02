@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aphine Cipher - David Nogales</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js\main.js"></script>
+        <link rel="icon" href="css/icon.png" type="image/x-icon">    
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Affin Cipher</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputText font-weight-bold" >Enter your text</label>
+                        <textarea class="form-control" id="inputText" rows="8" placeholder="Enter your text here"></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="updateStatistics()">Update Statistics</button>
+                    <button class="btn btn-primary" onclick="deleteChart()">Restart Statistics</button>
+                    <button onclick="encode()"class="btn btn-primary">Encode</button>
+                    <button onclick="decode()"class="btn btn-primary">Decode</button><br><br>
+                    <label for="a">Enter value of 'a' (should be coprime with 27):</label>
+                    <input type="number" id="a" min="1" max="25" class="bg-light"><br><br>
+                    <label for="b">Enter value of 'b':</label>
+                    <input type="number" id="b" class="bg-light"><br><br>
+                    <label for="result">Result:</label><br>
+                    <textarea id="result" rows="4" cols="50" readonly class="bg-light"></textarea><br><br>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-dark">
+                            Letter Frequency
+                        </div>
+                        <div class="card-body">
+                            <canvas id="letterChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

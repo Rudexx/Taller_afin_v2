@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taller Afin Login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="css/icon.png" type="image/x-icon">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+		"https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">  
+	<script src="js/generate.js"></script>
+</head>
+<body onload="createCaptcha()">
+    <div class="main">   
+		     
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form id="userForm">
+                <label for="chk" aria-hidden="true">Registrarse</label>
+                <input type="text" id="username" name="username" placeholder="Usuario" required="true">
+                <input type="email" id="email" name="email" placeholder="Email" required="true">
+                <input type="password" id="password" placeholder="Contraseña" required="true">
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form  id="loginForm">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="text" id="usernameLogin" placeholder="Usuario" required="">
+                <input type="password" id="passwordLogin" placeholder="Contraseña" required="">
+                <button type="submit">Login</button>
+            </form>
+        </div>		
+    </div>
+
+		<form>
+		<div id="captcha">
+			<canvas id="captcha" ></canvas>
+		</div>
+		<input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+	  </form>
+
+	
+
+	<script src="js/request.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

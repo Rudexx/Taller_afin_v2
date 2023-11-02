@@ -1,1 +1,2 @@
-# Taller_afin_v2
+# Taller_Afin_Nogales
+Taller Seguridad de la Información
