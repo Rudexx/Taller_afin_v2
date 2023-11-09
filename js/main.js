@@ -96,7 +96,7 @@ function encode() {
 function clearTildes(cadena) {
   // Reemplazar caracteres especiales con una expresión regular
   const caracteresEspeciales = /[0-9.,\/#!$%\^&\*;:{}=\-_`~()?áÁéÉíÍóÓúÚüÜ]/g;
-  const cadenaLimpia = cadena.replace(caracteresEspeciales, '');
+
 
   // Objeto de mapeo de caracteres con tilde a sus equivalentes sin tilde
   const caracteresConTilde = {
@@ -105,9 +105,10 @@ function clearTildes(cadena) {
   };
 
   // Reemplazar tildes y diacríticos utilizando el objeto de mapeo
-  const cadenaSinTilde = cadenaLimpia.replace(/[áÁéÉíÍóÓúÚüÜ]/g, (match) =>
+  const cadenaSinTilde = cadena.replace(/[áÁéÉíÍóÓúÚüÜ]/g, (match) =>
     caracteresConTilde[match]
   );
+  const cadenaLimpia = cadenaSinTilde.replace(caracteresEspeciales, '');
 
   return cadenaSinTilde;
 }

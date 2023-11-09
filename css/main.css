@@ -14,9 +14,9 @@
   }
 
   body {
-    background-color: var(--color-space-gray);
     color: var(--color-silver);
     border: 3px solid #C0C0C0;
+    background-image: url("back.jpg");
   }
   
   .heading {
@@ -26,4 +26,11 @@
   .button {
     background-color: var(--color-nebula-pink);
     color: var(--color-black);
+  }
+  button:hover{
+    background: #1b1a1c;
+  }
+
+  canvas{
+    pointer-events:none;
   }
